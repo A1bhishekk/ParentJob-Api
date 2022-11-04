@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: center;
   
 
 }
@@ -17,11 +18,14 @@ table {
 th, td {
   text-align: left;
   padding: 8px;
+  border: 1px black solid;
+  text-align: center;
+
 }
 
 
 .header th{
-  background-color: #4CAF50;
+  background-color: #af4c6f;
   color: white;
   font-size: 25px;
 
