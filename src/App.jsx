@@ -10,7 +10,7 @@ function App() {
       <table style={{border:"2px black"}} >
      
         <tr>
-          <th>Count</th>
+          <th>count</th>
           <td>{data.count}</td>
         </tr>
         <tr>
