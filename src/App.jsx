@@ -10,16 +10,16 @@ function App() {
       <table style={{border:"2px black"}} >
      
         <tr>
-          <th>count</th>
+          <th>Count</th>
           <td>{data.count}</td>
         </tr>
         <tr>
           <th>next</th>
-          <td>{data.next}</td>
+          <td><a href={data.next} target="_blank">{data.next}</a></td>
         </tr>
         <tr>
           <th>previous</th>
-          <td>{data.previous}</td>
+          <td><a href={data.previous} target="_blank">{data.previous}</a></td>
         </tr>
         <tr>
           <th>results</th>
