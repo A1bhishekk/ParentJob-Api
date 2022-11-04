@@ -194,3 +194,38 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
+<td style={{textAlign:"left"}}>  <details>
+                    <p>Mode : {mode}</p>
+                    <p>no_db : {no_db}</p>
+                    <p>Proxy :{proxy.map((i) => {
+                      return <p style={{ display: "inline" }}>"{i}",</p>
+                    })}</p>
+                    <p>Browser :{browser}</p>
+                    <p>fg_flag :{fg_flag}</p>
+                    <p>ext_method :{ext_method}</p>
+                    <p>fresh_data :{fresh_data == true ? "true" : "false"}</p>
+                    <p>crawl_modes :{crawl_modes}</p>
+                    <p>html_persist :{html_persist}</p>
+                    <p>kafka_topics :{kafka_topics.map((i) => {
+                      return <p style={{ display: "inline" }}>"{i}",</p>
+                    })}</p>
+                    <p>random_webgl :{random_webgl}</p>
+                    <p>with_session :{with_session}</p>
+                    <p>no_pagination :{no_pagination}</p>
+                    <p>count_per_page :{count_per_page}</p>
+                    <p>render_browser :{render_browser}</p>
+                    <p>source_python3 :{source_python3 == true ? "true" : "false"}</p>
+                    <p>shuffle_browser :{shuffle_browser}</p>
+                    <p>mandatory_fields :{mandatory_fields}</p>
+                    <p>browser_automation :{browser_automation == true ? "true" : "false"}</p>
+                  </details></td>

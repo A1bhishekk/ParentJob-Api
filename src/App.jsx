@@ -98,6 +98,7 @@ function App() {
 
                 <tr>
                   <td>{result.id}</td>
+                  
                   <td>{local_seed_file==null?"null":""}</td>
                   <td>{remote_seed_file==null?"null":""}</td>
                   <td>{result.status_verbose}</td>
@@ -110,32 +111,100 @@ function App() {
                   <td>{execution_start_time}</td>
                   <td>{execution_completion_time}</td>
                   <td>{result.status}</td>
+
+
+              
+                  <td>
+                  <details>
+                  <table>
+                    <tr>
+                      <th>mode</th>
+                      <td>{mode}</td>
+                    </tr>
+                    <tr>
+                      <th>no_db</th>
+                      <td>{no_db}</td>
+                    </tr>
+                    <tr>
+                      <th>proxy</th>
+                      <td>{proxy.map((i) => {
+                      return <p style={{ display: "inline" }}>"{i}",</p>
+                    })}</td>
+                    </tr>
+                    <tr>
+                      <th>browser</th>
+                      <td>{browser}</td>
+                    </tr>
+                    <tr>
+                      <th>fg_flag</th>
+                      <td>{fg_flag}</td>
+                    </tr>
+                    <tr>
+                      <th>ext_method</th>
+                      <td>{ext_method}</td>
+                    </tr>
+                    <tr>
+                      <th>fresh_data</th>
+                      <td>{fresh_data}</td>
+                    </tr>
+                    <tr>
+                      <th>crawl_modes</th>
+                      <td>{crawl_modes}</td>
+                    </tr>
+                    <tr>
+                      <th>html_persist</th>
+                      <td>{html_persist}</td>
+                    </tr>
+                    <tr>
+                      <th>kafka_topics</th>
+                      <td>{kafka_topics.map((i) => {
+                      return <p style={{ display: "inline" }}>"{i}",</p>
+                    })}</td>
+                    </tr>
+                    <tr>
+                      <th>random_webgl</th>
+                      <td>{random_webgl}</td>
+                    </tr>
+                    <tr>
+                      <th>with_session</th>
+                      <td>{with_session}</td>
+                    </tr>
+                    <tr>
+                      <th>no_pagination</th>
+                      <td>{no_pagination}</td>
+                    </tr>
+                    <tr>
+                      <th>count_per_page</th>
+                      <td>{count_per_page}</td>
+                    </tr>
+                    <tr>
+                      <th>render_browser</th>
+                      <td>{render_browser}</td>
+                    </tr>
+                    <tr>
+                      <th>source_python3</th>
+                      <td>{source_python3}</td>
+                    </tr>
+                    <tr>
+                      <th>shuffle_browser</th>
+                      <td>{shuffle_browser}</td>
+                    </tr>
+                    <tr>
+                      <th>mandatory_fields</th>
+                      <td>{mandatory_fields}</td>
+                    </tr>
+                    <tr>
+                      <th>browser_automation</th>
+                      <td>{browser_automation}</td>
+                    </tr>
+
+                  </table>
+                  </details>
+                  </td>
+
+
                   
-                  <td style={{textAlign:"left"}}>  <details>
-                    <p>Mode : {mode}</p>
-                    <p>no_db : {no_db}</p>
-                    <p>Proxy :{proxy.map((i) => {
-                      return <p style={{ display: "inline" }}>"{i}",</p>
-                    })}</p>
-                    <p>Browser :{browser}</p>
-                    <p>fg_flag :{fg_flag}</p>
-                    <p>ext_method :{ext_method}</p>
-                    <p>fresh_data :{fresh_data == true ? "true" : "false"}</p>
-                    <p>crawl_modes :{crawl_modes}</p>
-                    <p>html_persist :{html_persist}</p>
-                    <p>kafka_topics :{kafka_topics.map((i) => {
-                      return <p style={{ display: "inline" }}>"{i}",</p>
-                    })}</p>
-                    <p>random_webgl :{random_webgl}</p>
-                    <p>with_session :{with_session}</p>
-                    <p>no_pagination :{no_pagination}</p>
-                    <p>count_per_page :{count_per_page}</p>
-                    <p>render_browser :{render_browser}</p>
-                    <p>source_python3 :{source_python3 == true ? "true" : "false"}</p>
-                    <p>shuffle_browser :{shuffle_browser}</p>
-                    <p>mandatory_fields :{mandatory_fields}</p>
-                    <p>browser_automation :{browser_automation == true ? "true" : "false"}</p>
-                  </details></td>
+                  
 
 
                   <td>{result.source}</td>
