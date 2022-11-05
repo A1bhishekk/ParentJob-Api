@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: center;
+  /* text-align: center; */
   text-decoration: none;
   
 
@@ -20,7 +20,7 @@ th, td {
   text-align: left;
   padding: 8px;
   border: 1px black solid;
-  text-align: center;
+  /* text-align: center; */
 
 }
 
@@ -31,7 +31,12 @@ th, td {
   font-size: 25px;
 
 }
+
+thead th{
+  position: sticky;
+  top: 0;
+}
+
 tr:nth-child(even) {
   background-color: #96f1d6;
 }
-
