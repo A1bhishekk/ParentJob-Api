@@ -25,8 +25,8 @@ th, td {
 }
 
 
-.header th{
-  background-color: #af4c6f;
+ .header {
+  background-color: #a81448;
   color: white;
   font-size: 25px;
 
@@ -36,7 +36,7 @@ thead th{
   position: sticky;
   top: 0;
 }
-
+/* 
 tr:nth-child(even) {
   background-color: #96f1d6;
-}
+} */

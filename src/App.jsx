@@ -3,6 +3,7 @@ import data from './parentjobs_api.json'
 
 function App() {
   const resultsArr = data.results
+  const headobj=(resultsArr[0])
 
   return (
     <div className="App">
@@ -27,62 +28,17 @@ function App() {
         </tr>
       </table>
       <table>
-        <thead>
-          <tr className='header'>
-            <th>id</th>
-            <th>local_seed_file</th>
-            <th>remote_seed_file</th>
-            <th>status_verbose</th>
-            <th>my_seed_files</th>
-            <th>depth</th>
-            <th>numchild</th>
-            <th>created_at</th>
-            <th>modified_at</th>
-            <th>no_of_urls</th>
-            <th>execution_start_time</th>
-            <th>execution_completion_time</th>
-            <th>status</th>
-            <th>crawl_options</th>
-            <th>source</th>
-            <th>priority</th>
-            <th>tags</th>
-            <th>machine_tags</th>
-            <th>parenting_role</th>
-            <th>execution_scenario</th>
-            <th>crawl_type</th>
-            <th>vertical</th>
-            <th>tracking_code</th>
-            <th>execution_expires</th>
-            <th>project_name</th>
-            <th>userid</th>
-            <th>extraction_method</th>
-            <th>max_threads</th>
-            <th>max_urls_per_split</th>
-            <th>mins_to_split</th>
-            <th>s3_file_path</th>
-            <th>rejection_reason</th>
-            <th>expected_completion_time</th>
-            <th>is_daily_refresh</th>
-            <th>added_by_name</th>
-            <th>modified_by_name</th>
-            <th>periodicity</th>
-            <th>subscription_templates</th>
-            <th>account_job_instructions</th>
-            <th>job_tags</th>
-            <th>expiry</th>
-            <th>recrawl_mode</th>
-            <th>iteration_version</th>
-            <th>added_by</th>
-            <th>modified_by</th>
-            <th>flexi_group</th>
-            <th>preferred_execution_pool</th>
-            <th>execution_pool</th>
-            <th>periodic_task</th>
-            <th>periodic_parent_pointer</th>
-            <th>re_crawl_rule</th>
-            <th>machines</th>
 
-          </tr>
+        <thead>
+        {
+          Object.keys(headobj).map((key, index) => {
+            return (
+
+              <th className='header' key={index}>{key}</th>
+            )
+            
+          } )
+        }
         </thead>
 
 
@@ -93,6 +49,8 @@ function App() {
               , with_session, no_pagination, count_per_page, render_browser, source_python3, shuffle_browser, mandatory_fields, browser_automation } = result.crawl_options
             const { execution_scenario, crawl_type, vertical, tracking_code, execution_expires, project_name, max_threads, max_urls_per_split, mins_to_split, added_by_name, modified_by_name, expiry,
               recrawl_mode, iteration_version, added_by, flexi_group, local_seed_file, remote_seed_file, my_seed_files, numchild, no_of_urls, execution_start_time, execution_completion_time, machine_tags, userid, extraction_method, s3_file_path, rejection_reason, expected_completion_time, is_daily_refresh, periodicity, subscription_templates, account_job_instructions, job_tags, modified_by, preferred_execution_pool, execution_pool, periodic_task, periodic_parent_pointer, re_crawl_rule, machines } = result
+
+              
             return (
 
               < >
